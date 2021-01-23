@@ -1,0 +1,336 @@
+{
+	"info": {
+		"_postman_id": "4eca4cee-d67c-47c5-b15f-975167e4da6b",
+		"name": "HackThatStartup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "newUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"mark\",\n    \"lastName\": \"mark\",\n    \"email\": \"mark@mark.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hackthatstartup.herokuapp.com/auth/signup",
+							"protocol": "https",
+							"host": [
+								"hackthatstartup",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"mark@mark.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hackthatstartup.herokuapp.com/auth/login",
+							"protocol": "https",
+							"host": [
+								"hackthatstartup",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://hackthatstartup.herokuapp.com/auth/logout",
+							"protocol": "https",
+							"host": [
+								"hackthatstartup",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loggedin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hackthatstartup.herokuapp.com/auth/loggedin",
+							"protocol": "https",
+							"host": [
+								"hackthatstartup",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"loggedin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Work",
+			"item": [
+				{
+					"name": "newWork",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"company\": \"MISHIN'S\",\n    \"position\": \"Bartender\",\n    \"started\": \"2016-04-23T00:00:00Z\",\n    \"ended\": \"2019-01-26T00:00:00Z\",\n    \"job\": \"Liaised a partner to double annual sales from 35k to 75k in a year\",\n    \"userId\":\"600bff4548f2e90015044ba7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hackthatstartup.herokuapp.com/work/new",
+							"protocol": "https",
+							"host": [
+								"hackthatstartup",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"work",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editWork",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"company\": \"MISHIN'S\",\n    \"position\": \"Co-owner & Bartender\",\n    \"started\": \"2016-04-23T00:00:00Z\",\n    \"ended\": \"2019-01-26T00:00:00Z\",\n    \"job\": \"Liaised a partner to double annual sales from 35k to 75k in a year\",\n    \"userId\":\"600bff4548f2e90015044ba7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hackthatstartup.herokuapp.com/work/edit/600c087e946b1a7b4a2a225a",
+							"protocol": "https",
+							"host": [
+								"hackthatstartup",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"work",
+								"edit",
+								"600c087e946b1a7b4a2a225a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allWork",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hackthatstartup.herokuapp.com/work/all/600bff4548f2e90015044ba7",
+							"protocol": "https",
+							"host": [
+								"hackthatstartup",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"work",
+								"all",
+								"600bff4548f2e90015044ba7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteWork",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hackthatstartup.herokuapp.com/work/delete/600c087e946b1a7b4a2a225a",
+							"protocol": "https",
+							"host": [
+								"hackthatstartup",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"work",
+								"delete",
+								"600c087e946b1a7b4a2a225a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Academic",
+			"item": [
+				{
+					"name": "newAcademic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"university\": \"EAE Business School\",\n    \"degree\": \"Master of Business Administration, MBA\",\n    \"dateEnded\": \"2020-07-01T00:00\",\n    \"userId\": \"600bff4548f2e90015044ba7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hackthatstartup.herokuapp.com/academic/new",
+							"protocol": "https",
+							"host": [
+								"hackthatstartup",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"academic",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editAcademic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"university\": \"ETSAB\",\n    \"degree\": \"Degree in Architecture\",\n    \"dateEnded\": \"2011-07-01T00:00\",\n    \"userId\": \"600bff4548f2e90015044ba7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hackthatstartup.herokuapp.com/academic/edit/600c0b451881247d20ef526b",
+							"protocol": "https",
+							"host": [
+								"hackthatstartup",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"academic",
+								"edit",
+								"600c0b451881247d20ef526b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allAcademic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hackthatstartup.herokuapp.com/academic/all/600bff4548f2e90015044ba7",
+							"protocol": "https",
+							"host": [
+								"hackthatstartup",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"academic",
+								"all",
+								"600bff4548f2e90015044ba7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAcademic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hackthatstartup.herokuapp.com/academic/delete/600c0bb61881247d20ef526d",
+							"protocol": "https",
+							"host": [
+								"hackthatstartup",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"academic",
+								"delete",
+								"600c0bb61881247d20ef526d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
